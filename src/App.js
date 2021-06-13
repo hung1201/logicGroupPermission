@@ -45,12 +45,14 @@ export default function App() {
     {
       state && state.map((stateItem)=> {
         const layout = stateItem.list.map((listItem)=> (
-          <span key={listItem.name}>{listItem.name}-{listItem.check ? 'true' : 'false'}</span>
+          <span style={{marginRight:5}} key={listItem.name}>{listItem.name}_{listItem.check ? 'true' : 'false'}-------------</span>
         ))
         return (
           <div key={stateItem.role} style={{display:'flex',flexDirection:'column'}}>
             <span>Role: {stateItem.role}</span>
-            <div style={{display:'flex'}}>   {layout}</div>
+            <div>
+              <p>{layout}</p> 
+            </div>
           </div>
         )
       })
