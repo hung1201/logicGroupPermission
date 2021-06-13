@@ -1,12 +1,12 @@
 export const initState = [
     {
       id: 1,
-      role: "GM",
+      role: "General Manager",
       list: []
     },
     {
       id: 2,
-      role: "LM",
+      role: "Local Manager",
       list: []
     },
     {
@@ -53,7 +53,7 @@ export const initState = [
   export const groupAPI = [
     {
       groupID: 1,
-      role: "GM",
+      role: "General Manager",
       list: [
         {
           actionID: 1,
@@ -64,10 +64,11 @@ export const initState = [
           name: "Get parent"
         }
       ]
-    },
+    }
+    ,
     {
       groupID: 2,
-      role: "LM",
+      role: "Local Manager",
       list: [
         {
           actionID: 1,
@@ -81,15 +82,15 @@ export const initState = [
     },
     {
       groupID: 3,
-      role: "BA",
+      role: "Branch Manager",
       list: [
         {
           actionID: 1,
           name: "Get course"
         },
         {
-          actionID: 2,
-          name: "Get student"
+          actionID: 6,
+          name: "Get schedule"
         }
       ]
     }
