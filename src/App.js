@@ -59,6 +59,17 @@ export default function App() {
   console.log('state',state)
   return <div className="App">
     <span>Action</span>
-
+    {
+      state && state.map(item => (
+        <div style={{display:'flex',flexDirection:'column'}}>
+          <span>{item.name}</span>
+          <div style={{marginLeft:20, display:'flex', flexDirection:'column'}}>
+          <span>General Manager {state[item.actionID - 1]?.check?.['General Manager'] ? 'true' : 'false'}</span>
+          <span>Local Manager {state[item.actionID - 1]?.check?.['Local Manager'] ? 'true' : 'false'}</span>
+          <span>Branch Manager {state[item.actionID - 1]?.check?.['Branch Manager'] ? 'true' : 'false'}</span>
+          </div>
+        </div>
+      ))
+    }
   </div>;
 }
